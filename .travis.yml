@@ -1,0 +1,31 @@
+sudo: required
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - "8"
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+cache:
+  directories:
+     - ./node_modules
+
+install:
+  - npm install
+
+before_script:
+    - "sudo chown root /opt/google/chrome/chrome-sandbox"
+    - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
+
+script:
+  # Use Chromium instead of Chrome.
+  - xvfb-run -a npm run test
+  - xvfb-run -a npm run e2e -- --protractor-config=protractor-ci.conf.js
+
