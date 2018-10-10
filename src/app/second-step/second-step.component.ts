@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatDialog} from "@angular/material";
-import {FinishDialogComponent} from "../finish-dialog/finish-dialog.component";
-import {User} from "../user/user";
-import {ConnexionService} from "../connexion.service/connexion.service";
+import {MatDialog} from '@angular/material';
+import {FinishDialogComponent} from '../finish-dialog/finish-dialog.component';
+import {User} from '../user/user';
+import {ConnexionService} from '../connexion.service/connexion.service';
 
 @Component({
   selector: 'app-second-step',
@@ -21,13 +21,13 @@ export class SecondStepComponent implements OnInit {
   ngOnInit() {
 
   }
-  onScroll(terms, check){
-    if (terms.scrollTop + terms.offsetHeight +2 >= terms.scrollHeight){
+  onScroll(terms, check) {
+    if (terms.scrollTop + terms.offsetHeight + 2 >= terms.scrollHeight) {
       check.removeAttribute('disabled');
     }
   }
-  onValid(check){
-    if(check.checked) {
+  onValid(check) {
+    if (check.checked) {
       this.loading = true;
       this.cnxService.createConnexion(this.user).subscribe(
         result => {
@@ -42,8 +42,8 @@ export class SecondStepComponent implements OnInit {
       this.showAlert('Action non valide.', 'Lire et accepter les termes pour terminer');
     }
   }
-  showAlert(title: string, description:string) {
-    let dialogRef = this.dialog.open(FinishDialogComponent, {
+  showAlert(title: string, description: string) {
+    const dialogRef = this.dialog.open(FinishDialogComponent, {
       data: {
         'title': title,
         'description': description
@@ -51,6 +51,6 @@ export class SecondStepComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       // NOTE: The result can also be nothing if the user presses the `esc` key or clicks outside the dialog
-    })
+    });
   }
 }

@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
 import { FirstStepComponent } from './first-step/first-step.component';
 import { SecondStepComponent } from './second-step/second-step.component';
 import { FinishDialogComponent } from './finish-dialog/finish-dialog.component';
-import { ConnexionService } from "./connexion.service/connexion.service";
-import { HttpClientModule } from "@angular/common/http";
+import { ConnexionService } from './connexion.service/connexion.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [

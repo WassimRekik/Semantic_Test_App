@@ -13,7 +13,7 @@ div.license-agreement
 .licence-page-content{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5% !important;
+  margin-top: 5%;
   height: 540px;
   width: 100%;
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {User} from "./user/user";
+import {User} from './user/user';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import {User} from "./user/user";
 export class AppComponent {
   first_step_active = true;
   user: User;
-  return_button(){
+  return_button() {
     this.first_step_active = true;
   }
 }

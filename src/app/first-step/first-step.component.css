@@ -1,7 +1,7 @@
 .form-page-content{
   display: flex;
   justify-content: center;
-  margin-top: 20% !important;
+  margin-top: 20%;
   height: 100%;
   width: 100%;
 }
@@ -43,7 +43,6 @@ input[type=submit]:active{
 input::placeholder {
   color: #3E80CC;
 }
-
 {
   box-sizing: border-box  ;
 }
