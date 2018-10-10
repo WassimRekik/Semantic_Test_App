@@ -1,0 +1,36 @@
+<div class="form-page-content">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <table style="border-collapse: separate; border-spacing: 40px;">
+      <tr>
+        <td>
+          <p style="color:#3E80CC;font-size: 1.4em;font-family: Arial">Email :</p>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" id="email" placeholder="Email" formControlName="email">
+            <div *ngIf="submitted && f['email'].errors" style="color: red">
+              <div *ngIf="f['email'].errors.required">Email is required</div>
+              <div *ngIf="f['email'].errors.email">Email must be a valid email address</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="color:#3E80CC;font-size: 1.4em;font-family: Arial">Mot de passe :</p>
+
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="Mot de passe" formControlName="password">
+            <div *ngIf="submitted && f['password'].errors" style="color: red">
+              <div *ngIf="f['password'].errors.required">Password is required</div>
+              <div *ngIf="f['password'].errors.minlength">Password must be at least 6 characters</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" style="margin-top: 100px" value="Connexion">
+  </form>
+</div>

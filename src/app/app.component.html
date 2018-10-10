@@ -1,0 +1,15 @@
+<div class="page-content">
+  <div class="card-style">
+    <div class="card-header">
+      <input type="button"  value="X" style="float: right;" (click)="return_button()" *ngIf="!first_step_active">
+    </div>
+    <div class="card-content" *ngIf="first_step_active">
+      <app-first-step [(first_step_active)]="first_step_active" [(user)]="user"></app-first-step>
+    </div>
+    <div class="card-content" *ngIf="!first_step_active">
+      <app-second-step [user]="user"></app-second-step>
+    </div>
+  </div>
+</div>
+
+

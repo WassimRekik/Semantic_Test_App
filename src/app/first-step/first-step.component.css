@@ -1,0 +1,52 @@
+.form-page-content{
+  display: flex;
+  justify-content: center;
+  margin-top: 20% !important;
+  height: 100%;
+  width: 100%;
+}
+input[type=text]{
+  width: 300px;
+  border: solid #3E80CC;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #3E80CC;
+}
+input[type=password]{
+  width: 300px;
+  border: solid #3E80CC;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #3E80CC;
+}
+input[type=submit]{
+  padding: 10px;
+  border: solid #3E80CC;
+  font-size: 1.2em;
+  color: #3E80CC;
+  background: #EDEDED;
+  margin:auto;
+  display:block;
+}
+input[type=submit]:hover{
+  border: solid #3E80CC;
+  font-size: 1.2em;
+  color: rgba(62, 128, 204, 0.71);
+  background: rgba(237, 237, 237, 0.71);
+}
+input[type=submit]:active{
+  border: solid #3E80CC;
+  font-size: 1.2em;
+  color: #ffffff;
+  background: #3E80CC;
+}
+input::placeholder {
+  color: #3E80CC;
+}
+
+{
+  box-sizing: border-box  ;
+}
+.error-msg{
+  color: red;
+}
