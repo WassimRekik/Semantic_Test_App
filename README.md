@@ -4,6 +4,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+## Étapes
+
+1. L'utilisateur introduit son Email et son mot de passe.
+2. L'application valide les champs du formulaire. Un message d'erreur sera affiché si les champs ne sont pas valide.
+3. Un click sur le bouton Connexion redirige l'utilisateur vers les termes d'utilisation.
+4. La case à cocher sera activée seulement si l'utilisateur scrolle jusqu'en bas du contenu textuel.
+5. En validant, un appel en POST vers https://reqres.in/api/users sera effectuer. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
