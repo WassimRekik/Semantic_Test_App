@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "test:cover": "rm -rf ./coverage && ng test --no-watch --code-coverage",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
